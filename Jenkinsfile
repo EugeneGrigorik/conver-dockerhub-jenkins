@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('--push--') {
 			steps {
-				bat "mvn compile jib:build -DsendCredentialsOverHttp=true -Djib.httpTimeout=0"
+				sh "mvn compile jib:build -DsendCredentialsOverHttp=true -Djib.httpTimeout=0"
 			}
 		}
 	}
